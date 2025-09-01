@@ -27,32 +27,112 @@ Les cartes peuvent être partagées en toute sécurité car elles ne contiennent
 
 ## Installation
 
-### Option A : Application standalone (Recommandé pour non-techniciens)
+### Option A : Application standalone (Recommandé - Le plus simple)
 
-1. **Téléchargez l'application** correspondant à votre système :
-   - Mac : `IlotierZoneMapper.app`
-   - Windows : `IlotierZoneMapper.exe`
-   - Linux : `IlotierZoneMapper`
+1. **Téléchargez l'application** depuis [GitHub Releases](https://github.com/eprouveze/CarteIlotier/releases) :
+   - Mac : `CarteIlotier-Mac-v1.0.zip`
+   - Windows : `CarteIlotier-Windows-v1.0.zip` (à venir)
+   - Linux : `CarteIlotier-Linux-v1.0.zip` (à venir)
 
 2. **Sur Mac** : 
-   - Double-cliquez sur l'application
-   - Si Mac bloque l'ouverture : Préférences Système > Sécurité > "Ouvrir quand même"
+   - Décompressez le fichier zip
+   - Glissez `CarteIlotier.app` dans votre dossier Applications
+   - Au premier lancement : Clic droit > "Ouvrir"
+   - Si Mac bloque : Préférences Système > Sécurité > "Ouvrir quand même"
 
 3. **Sur Windows** :
-   - Double-cliquez sur le .exe
-   - Si Windows Defender bloque : Cliquez "Plus d'infos" > "Exécuter quand même"
+   - Décompressez le fichier zip
+   - Double-cliquez sur `CarteIlotier.exe`
+   - Si Windows Defender bloque : "Plus d'infos" > "Exécuter quand même"
 
-### Option B : Version Python (Pour utilisateurs avancés)
+### Option B : Version Python depuis le code source (Pour utilisateurs techniques)
 
-1. Installez Python 3.7+ depuis python.org
-2. Installez les dépendances :
+Cette option permet de toujours avoir la dernière version et de modifier le code si besoin.
+
+#### Étape 1 : Installer Python
+
+1. **Vérifiez si Python est déjà installé** :
    ```bash
-   pip install googlemaps openpyxl tkinter
+   python3 --version
    ```
-3. Lancez l'application :
+   Si vous voyez "Python 3.7" ou plus récent, passez à l'étape 2.
+
+2. **Sinon, installez Python** :
+   - Mac : `brew install python3` ou téléchargez depuis [python.org](https://python.org)
+   - Windows : Téléchargez depuis [python.org](https://python.org) (cochez "Add to PATH")
+   - Linux : `sudo apt install python3 python3-pip` (Ubuntu/Debian)
+
+#### Étape 2 : Télécharger le code
+
+**Option 2a : Avec Git (recommandé)**
+```bash
+# Cloner le repository
+git clone https://github.com/eprouveze/CarteIlotier.git
+cd CarteIlotier
+```
+
+**Option 2b : Sans Git**
+1. Allez sur https://github.com/eprouveze/CarteIlotier
+2. Cliquez sur "Code" > "Download ZIP"
+3. Décompressez le fichier
+4. Ouvrez un terminal dans le dossier décompressé
+
+#### Étape 3 : Installer les dépendances
+
+```bash
+# Sur Mac/Linux
+pip3 install -r requirements.txt
+
+# Sur Windows
+pip install -r requirements.txt
+```
+
+Si `pip` n'est pas reconnu, essayez :
+```bash
+python3 -m pip install -r requirements.txt
+```
+
+#### Étape 4 : Lancer l'application
+
+```bash
+# Sur Mac/Linux
+python3 ilotier_zone_mapper.py
+
+# Sur Windows
+python ilotier_zone_mapper.py
+```
+
+#### Mise à jour (pour la version Python)
+
+Pour obtenir les dernières améliorations :
+```bash
+# Si vous avez utilisé git
+git pull
+
+# Sinon, re-téléchargez le ZIP depuis GitHub
+```
+
+### Option C : Créer votre propre application standalone
+
+Si vous voulez créer une version standalone pour votre système :
+
+1. **Suivez l'Option B** pour installer Python et le code
+2. **Lancez le script de construction** :
    ```bash
-   python ilotier_zone_mapper.py
+   python3 build_app.py
    ```
+3. **L'application sera créée dans** `dist/` :
+   - Mac : `dist/CarteIlotier.app`
+   - Windows : `dist/CarteIlotier.exe`
+   - Linux : `dist/CarteIlotier`
+
+### Tableau comparatif des options
+
+| Option | Avantages | Inconvénients | Pour qui ? |
+|--------|-----------|---------------|------------|
+| **A - Standalone** | ✅ Aucune installation<br>✅ Simple | ❌ Mises à jour manuelles | Non-techniciens |
+| **B - Python** | ✅ Toujours à jour<br>✅ Modifiable | ❌ Installation Python requise | Utilisateurs avancés |
+| **C - Build** | ✅ Version personnalisée | ❌ Plus complexe | Développeurs |
 
 ---
 
