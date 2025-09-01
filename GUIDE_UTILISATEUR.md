@@ -271,23 +271,71 @@ L'application génère 3 fichiers dans le même dossier que vos données :
 
 ## Partage avec votre co-ilotier
 
-### Créer une carte partageable
+### Créer une carte Google My Maps depuis le fichier KML
 
-1. Allez sur https://mymaps.google.com
-2. Cliquez "Créer une nouvelle carte"
-3. Importez le fichier `zones.kml`
-4. La carte affiche :
-   - Points bleus : Zone 1
-   - Points rouges : Zone 2
-   - Étoiles vertes : Position des ilotiers
+#### Étape 1 : Accéder à Google My Maps
+1. Ouvrez votre navigateur web
+2. Allez sur https://mymaps.google.com
+3. Connectez-vous avec votre compte Google
 
-### Partager la carte
+#### Étape 2 : Créer une nouvelle carte
+1. Cliquez sur le bouton **"Créer une nouvelle carte"** (ou "+ Créer")
+2. Une nouvelle carte vierge s'ouvre
 
-1. Cliquez "Partager"
-2. Entrez l'email de votre co-ilotier
-3. Ou obtenez un lien de partage
+#### Étape 3 : Importer le fichier KML
+1. Dans le menu de gauche, cliquez sur **"Importer"**
+2. Deux options s'offrent à vous :
+   - **Glisser-déposer** : Faites glisser le fichier `zones.kml` dans la fenêtre
+   - **Parcourir** : Cliquez sur "Sélectionner un fichier" et choisissez `zones.kml`
+3. Cliquez sur **"Télécharger"** ou **"Upload"**
+4. Attendez quelques secondes pour l'import
 
-**Rappel sécurité** : La carte ne montre que des numéros, aucun nom !
+#### Étape 4 : Vérifier l'import
+La carte devrait maintenant afficher :
+- 🔵 **Points bleus** : Familles de la Zone 1 (premier ilotier)
+- 🔴 **Points rouges** : Familles de la Zone 2 (second ilotier)
+- ⭐ **Étoiles vertes** : Position des deux ilotiers
+- **Limites de zones** : Polygones délimitant les territoires (si inclus)
+
+#### Étape 5 : Personnaliser la carte (optionnel)
+1. **Renommer la carte** : Cliquez sur "Carte sans titre" en haut
+   - Exemple : "Zones Ilotiers Shinjuku - 2025"
+2. **Ajouter une description** : Cliquez sur l'icône ℹ️
+3. **Modifier les couleurs** : Cliquez sur l'icône de peinture 🎨 d'un calque
+4. **Masquer/Afficher des calques** : Cochez/décochez les cases
+
+### Partager la carte avec votre co-ilotier
+
+#### Option 1 : Partage par email
+1. Cliquez sur le bouton **"Partager"** (en haut à droite)
+2. Dans "Inviter des personnes", entrez l'email de votre co-ilotier
+3. Choisissez le niveau d'accès :
+   - **Consultation** : Peut voir seulement
+   - **Modification** : Peut éditer la carte
+4. Cliquez sur **"Envoyer"**
+
+#### Option 2 : Partage par lien
+1. Cliquez sur **"Partager"**
+2. Dans "Obtenir le lien", cliquez sur **"Modifier"**
+3. Choisissez qui peut accéder :
+   - "Limité" : Seules les personnes invitées
+   - "Tous les utilisateurs disposant du lien"
+4. Copiez le lien et envoyez-le par email/WhatsApp/etc.
+
+#### Option 3 : Intégration sur un site web
+1. Cliquez sur les 3 points ⋮ à côté du titre
+2. Sélectionnez **"Intégrer sur mon site"**
+3. Copiez le code HTML fourni
+4. Collez-le dans votre site web
+
+### Conseils pratiques
+
+- **Performance** : Pour plus de 500 familles, la carte peut être lente à charger
+- **Mise à jour** : Pour actualiser les données, supprimez l'ancien calque et réimportez un nouveau KML
+- **Impression** : Menu ⋮ > "Imprimer" pour créer un PDF de la carte
+- **Mobile** : Installez l'app "My Maps" sur iOS/Android pour consulter hors ligne
+
+**🔒 Rappel sécurité** : La carte ne montre que les codes famille (numéros), aucun nom n'est visible !
 
 ---
 
