@@ -1,0 +1,6 @@
+# Core dependencies for CarteIlotier
+googlemaps>=4.10.0
+openpyxl>=3.1.0
+
+# For building standalone app (optional)
+pyinstaller>=6.0.0

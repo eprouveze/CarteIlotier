@@ -1,0 +1,66 @@
+# Security - NEVER commit these
+.env
+*.env
+.ilotier_config.json
+~/.ilotier_config.json
+
+# API Keys and secrets
+*api_key*
+*API_KEY*
+config.json
+secrets.json
+
+# Personal data files
+*.csv
+*.xlsx
+*.xls
+zones.json
+familles_zones.csv
+updated_families.csv
+zones.kml
+zones_with_boundaries.kml
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+
+# PyInstaller
+build/
+dist/
+*.spec
+*.manifest
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary files
+*.tmp
+*.bak
+*.log
+temp/
+tmp/
+
+# Test data (may contain personal info)
+test_data/
+test_*.csv
+test_*.xlsx
+
+# Memo and personal notes
+memo_*.txt
+*_personnel.*
+*_private.*
